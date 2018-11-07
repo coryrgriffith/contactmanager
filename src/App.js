@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import Contact from "./components/Contact";
 
 class App extends Component {
   render() {
@@ -32,6 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>The App Component</h1>
+        <Contact />
         {/* {showHello ? <h4>Hello {name.toUpperCase()}</h4> : null}
         {math} */}
       </div>
