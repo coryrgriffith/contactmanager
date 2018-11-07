@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./App.css";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 
@@ -32,7 +33,7 @@ class App extends Component {
     // jsx version
     return (
       <div className="App">
-        <Header />
+        <Header branding="Contact Manager" />
         <Contact />
         {/* {showHello ? <h4>Hello {name.toUpperCase()}</h4> : null}
         {math} */}
