@@ -25,9 +25,7 @@ class Contact extends Component {
 }
 
 Contact.proptTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired
+  contact: PropTypes.object.isRequired
 };
 
 export default Contact;
