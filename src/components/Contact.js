@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./contact.css";
+// import "./contact.css";
 
 class Contact extends Component {
   // example of how to put PropTypes inside class
