@@ -9,16 +9,11 @@ class Contact extends Component {
   //   email: PropTypes.string.isRequired,
   //   phone: PropTypes.string.isRequired
   // };
-  constructor() {
-    super();
-    this.state = {};
+  state = {};
 
-    this.onShowClick = this.onShowClick.bind(this);
-  }
-
-  onShowClick() {
+  onShowClick = () => {
     console.log(this.state);
-  }
+  };
 
   render() {
     const { name, email, phone } = this.props.contact;
