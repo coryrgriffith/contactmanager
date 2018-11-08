@@ -15,7 +15,11 @@ class Contact extends Component {
     return (
       <div className="card card-body mb-3">
         <h4>
-          {name} <i className="fas fa-sort-down" />
+          {name}{" "}
+          <i
+            onClick={() => console.log("Hello")}
+            className="fas fa-sort-down"
+          />
         </h4>
         <ul className="list-group">
           <li className="list-group-item">Email: {email}</li>
