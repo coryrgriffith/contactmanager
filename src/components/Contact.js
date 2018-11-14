@@ -10,7 +10,7 @@ class Contact extends Component {
   //   phone: PropTypes.string.isRequired
   // };
   state = {
-    showContactInfo: true
+    showContactInfo: false
   };
 
   render() {
