@@ -14,7 +14,7 @@ class Contact extends Component {
   };
 
   onShowClick = e => {
-    this.setState({ showContactInfo: false });
+    this.setState({ showContactInfo: !this.state.showContactInfo});
   };
 
   render() {
