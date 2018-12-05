@@ -2,14 +2,21 @@ import React, { Component } from "react";
 
 class Test extends Component {
   state = {
-    test: "test"
+    test: "test",
+    title: "",
+    body: ""
   };
 
   // runs after component is mounted
   componentDidMount() {
     fetch("http://jsonplaceholder.typicode.com/posts/1")
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data =>
+        this.setState({
+          title: data.title,
+          body: data.body
+        })
+      );
   }
 
   // runs before component renders
