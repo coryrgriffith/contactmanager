@@ -11,6 +11,21 @@ class EditContact extends Component {
     errors: {}
   };
 
+  async componentDidMount() {
+    const { id } = this.props.match.params;
+    const response = await axios.get(
+      `http://jsonplaceholder.typicode.com/users/${id}`
+    );
+
+    const contact = response.data;
+
+    this.setState({
+      name: contact.name,
+      email: contact.email,
+      phone: contact.phone
+    });
+  }
+
   onSubmit = async (dispatch, e) => {
     e.preventDefault();
 
