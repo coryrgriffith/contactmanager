@@ -7,41 +7,43 @@ class Test extends Component {
 
   // runs after component is mounted
   componentDidMount() {
-    console.log("componentDidMount...");
+    fetch("http://jsonplaceholder.typicode.com/posts/1")
+      .then(response => response.json())
+      .then(data => console.log(data));
   }
 
   // runs before component renders
   // Legacy Lifecycle
-  componentWillMount() {
-    console.log("componentWillMount...");
-  }
+  // componentWillMount() {
+  //   console.log("componentWillMount...");
+  // }
 
-  // runs when component is updated
-  componentDidUpdate() {
-    console.log("componentDidUpdate...");
-  }
+  // // runs when component is updated
+  // componentDidUpdate() {
+  //   console.log("componentDidUpdate...");
+  // }
 
-  // Legacy Lifecycle
-  componentWillUpdate() {
-    console.log("componentWillUpdate...");
-  }
+  // // Legacy Lifecycle
+  // componentWillUpdate() {
+  //   console.log("componentWillUpdate...");
+  // }
 
-  // runs when component receives new props
-  // Legacy Lifecycle
-  componentWillReceiveProps(nextProps, nextState) {
-    console.log("componentWillReceiveProps...");
-  }
+  // // runs when component receives new props
+  // // Legacy Lifecycle
+  // componentWillReceiveProps(nextProps, nextState) {
+  //   console.log("componentWillReceiveProps...");
+  // }
 
-  // must return state or null
-  static getDerivedStateFromProps(nextProps, prevState) {
-    return {
-      test: "something"
-    };
-  }
+  // // must return state or null
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   return {
+  //     test: "something"
+  //   };
+  // }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("getSnapshotBeforeUpdate...");
-  }
+  // getSnapshotBeforeUpdate(prevProps, prevState) {
+  //   console.log("getSnapshotBeforeUpdate...");
+  // }
 
   render() {
     return (
